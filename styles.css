@@ -1,0 +1,506 @@
+/*Style Sheet for project 1*/
+
+/*////Entire page styles////*/
+
+* {
+  /*border: 1px dashed black;*/
+  margin: 0 auto;
+
+}
+
+/*////////////DIALOG BOX/////////////*/
+#my-modal{
+  position: fixed;
+  height: 500px;
+  width: 500px;
+  left: 20.5%;
+  top: 12%;
+  border: 20px groove;
+  border-radius: 20px;
+  background-color: rgba(15, 15, 15, .8);
+  border-top-color: rgba(175,124,224,1);
+  border-left-color: rgba(63, 241, 180, 1);
+  border-right-color: rgba(232, 105,113, 1);
+  border-bottom-color: rgba(250,171,64, 1);
+  display: none;
+  color: white;
+}
+
+#close-button{
+  height: 42px;
+  font-size: 16px;
+  width: 75px;
+  border: 5px solid white;
+  box-shadow: 0px 0px 20px white;
+  background-color: black;
+  color: white;
+  border-radius: 15px;
+  position: fixed;
+  margin-top: -25px;
+  margin-left: 229px;
+  /*font-family: 'Cabin Sketch', cursive;*/
+}
+
+.dialogHeader{
+  text-align: center;
+  font-size: 35px;
+  color: white;
+  font-family: 'Cabin Sketch', cursive;
+  font-weight: 700;
+  margin-left: 107px;
+  margin-top: 20px;
+  position: relative;
+}
+
+#my-modal > p{
+  font-size: 18px;
+  margin: 35px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+#jTitle{
+  margin-top: 0px;
+  margin-left: -92px;
+  margin-bottom: 0px;
+}
+
+.dialogBox{
+  border: 2px solid black;
+  height: 600px;
+  width: 600px;
+  background-color: white;
+}
+
+/*////GAME SCREEN/////////////////////*/
+#screen {
+  width: 800px;
+  height: 700px;
+  text-align: center;
+  background-color: rgba(15, 15, 15, .9);
+  border: 20px groove;
+  border-radius: 20px;
+  border-top-color: rgba(175,124,224,1);
+  border-left-color: rgba(63, 241, 180, 1);
+  border-right-color: rgba(232, 105,113, 1);
+  border-bottom-color: rgba(250,171,64, 1);
+
+}
+
+
+/*///Div containers in body of screen///*/
+
+header{
+  height: 50px;
+  width: 600px;
+  margin: 0 auto;
+  /*font-family: 'Chewy', cursive;*/
+
+
+}
+
+.headerDiv{
+  text-align: left;
+  font-size: 35px;
+  /* text-shadow: 0px 0px 20px white; */
+  color: white;
+  font-family: 'Cabin Sketch', cursive;
+  font-weight: 700
+}
+
+#jTitleLeft{
+  margin-top: 0px;
+  margin-left: -92px;
+  margin-bottom: 0px;
+}
+
+/*#jTitleRight{
+
+}*/
+
+.lightning{
+  height: 60px;
+  transform: rotate(-15deg);
+  position: fixed;
+
+}
+
+.lightningOpacity{
+  opacity: 0;
+}
+
+#picForLeft{
+  margin-left: -378px;
+  margin-top: 36px;
+}
+
+#picForRight{
+  transform: scaleX(-1) rotate(-15deg);
+  margin-left: 320px;
+  margin-top: 36px;
+}
+
+.categoriesBox{
+  height:100px;
+  width: 575px;
+  background-color: rgba(245, 168,63,1);
+  border-radius: 20px;
+  border: 7px outset white;
+  box-shadow:0px 0px 55px #F5A83F;
+  margin: 0 auto;
+  font-family: 'Oswald', sans-serif;
+  color: white;
+  font-size:20px;
+}
+
+#spinner{
+  font-size: 20px;
+  height: 175px;
+  width: 175px;
+  display: block;
+  position: fixed;
+  margin-left: 311px;
+  margin-top: 250px;
+  outline: none;
+  border: double;
+  border-width: 40px;
+  border-radius: 90px;
+  border-top-color: rgba(175,124,224,1);
+  border-left-color: rgba(63, 241, 180, 1);
+  border-right-color: rgba(232, 105,113, 1);
+  border-bottom-color: rgba(250,171,64, 1);
+  box-shadow: 0px 0px 98px white;
+  background-color: rgba(15, 15, 15, .75);
+  color: white;
+  font-family: 'Oswald', sans-serif;
+}
+
+.mainContainer{
+  width:800px;
+  height: 545px;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+}
+
+.questionsSection{
+  width: 575px;
+  height: 175px;
+  background-color: rgba(66,214,160,.8);
+  border: 7px outset white;
+  margin-top: 4px;
+  border-radius: 20px;
+  box-shadow:0px 0px 55px #42D6A0;
+  color: white;
+}
+
+.answersSection {
+  width: 575px;
+  height: 210px;
+  background-color: rgba(232,105,113,1);
+  border: 7px outset white;
+  margin-top: 4px;
+  border-radius: 20px;
+  box-shadow:0px 0px 55px #E86971;
+  color: white;
+}
+
+.alertSection{
+  width: 575px;
+  height: 90px;
+  background-color: rgba(115,55,150,1);
+  margin: 0 auto;
+  border: 7px outset white;
+  border-radius: 20px;
+  box-shadow:0px 0px 55px #733796;
+  color: white;
+}
+
+/*///Div containers for frames in each body section///*/
+
+/*///Category selector///*/
+
+
+.categoryHeader{
+  text-align: center;
+  height: 27px;
+  padding-top: 7px;
+  width: 500px;
+  margin: 0 auto;
+}
+
+.categorySelected{
+  text-align: center;
+  height: 36px;
+  width: 500px;
+  padding-top: 15px;
+  border-radius: 10px;
+  margin: -20px auto;
+  background-color: rgba(15, 15, 15, .8);
+}
+
+
+/*////Question frame////*/
+
+/*.question-frame{
+  margin: 0 auto;
+  margin-top: 10px;
+  width: 500px;
+  height: 175px;
+  background-color: white;
+}*/
+.question-html{
+  width: 500px;
+  height: 104px;
+  margin: 0 auto;
+  margin-top: 28px;
+  padding-top: 23px;
+  border-radius: 10px;
+  background-color: rgba(15, 15, 15, .8);
+}
+
+
+/*////Answer frame////*/
+.answer-frame{
+  height: 165px;
+  width: 500px;
+  margin: 0 auto;
+  margin-top: 25px;
+  border-radius: 10px;
+  background-color: rgba(15, 15, 15, .8);
+  position: relative;
+}
+
+.answers{
+  color: black;
+  height: 30px;
+  width: 140px;
+  margin-left:200px;
+  margin-top:50px;
+  border-radius: 10px;
+  /*margin: 5px 10px 10px 10px;*/
+  position: absolute;
+  border: 2px outset white;
+  background-color: whitesmoke;
+  box-shadow:0px 0px 10px white;
+}
+
+.blueGlow{
+  outline:none;
+  border-style: outset;
+  border-width: thick;
+  border-color:#9ecaed;
+  box-shadow:0px 0px 90px #9ecaed;
+}
+/*border-width: 10px;
+    border-color: #E86971;
+    box-shadow: 0px 0px 98px #E86971;*/
+/*////Alert Section////*/
+
+
+/*.reset{
+  height: 50px;
+  width: 100px;
+}*/
+
+.alertBox{
+  width: 500px;
+  font-size: 20px;
+  height: 41px;
+  margin: 0 auto;
+  margin-top: 13px;
+  padding-top: 23px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: rgba(15, 15, 15, .8);
+}
+
+
+/*/////////////SIDE PANELS SECTION////////*/
+.player{
+  display: inline-block;
+  /*background-color: rgba(15, 15, 15, .75);*/
+  position: absolute;
+  width: 70px;
+  height: 30px;
+  margin-top: 10px;
+  padding-top: 5px;
+  font-family: 'Oswald', sans-serif;
+
+}
+
+.activePlayer{
+  border: 5px groove white;
+  box-shadow:0px 0px 20px white;
+  border-radius: 10px;
+  background-color: white;
+  color: black;
+  height: 30px;
+  width: 70px;
+  margin-top: 10px;
+  padding-top: 5px;
+}
+
+
+#player1{
+  float: left;
+  margin-left: -390px;
+  border: 5px groove white;
+  border-radius: 10px;
+  box-shadow:0px 0px 20px white;
+  /*background-color: rgba(15, 15, 15, .75);*/
+}
+
+#player2{
+  float: right;
+  margin-left: 312px;
+  border: 5px groove white;
+  border-radius: 10px;
+  box-shadow:0px 0px 20px white;
+  /*background-color: rgba(15, 15, 15, .75);*/
+}
+
+.roundsWon{
+  display: inline-block;
+  /*background-color: rgba(15, 15, 15, .75);*/
+  position: absolute;
+  height: 50px;
+  width: 70px;
+  margin-top: 57px;
+  font-family: 'Oswald', sans-serif;
+  padding-top: 5px;
+  height: 30px;
+}
+
+#player1Rounds{
+  float: left;
+  margin-left: -390px;
+  border: 5px groove white;
+  border-radius: 10px;
+  box-shadow:0px 0px 20px white;
+}
+#player2Rounds{
+  float: right;
+  margin-left: 312px;
+  border: 5px groove white;
+  border-radius: 10px;
+  box-shadow:0px 0px 20px white;
+}
+
+
+.scoreMeters {
+  height: 300px;
+  width: 50px;
+  display: inline-block;
+  margin-top: 150px;
+  border: 10px groove white;
+  /*box-shadow:0px 0px 20px white;*/
+}
+
+#player1Meter{
+  float: left;
+  margin-left: 10px;
+  position: relative;
+}
+
+#progress1{
+  position: absolute;
+  bottom: 0;
+  background-color: #9ecaed;
+  height: 0px;
+  width: 100%;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  border-style: 3px ridge #9ecaed;
+  /*border-width: thick;*/
+  box-shadow: 14px -2px 37px #9ecaed;
+}
+
+#player2Meter{
+  float: right;
+  margin-right: 10px;
+  position: relative;
+}
+
+#progress2{
+  position: absolute;
+  bottom: 0;
+  background-color: #9ecaed;
+  height: 0px;
+  width: 100%;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  border-style: 3px ridge #9ecaed;
+  /*border-width: thick;*/
+  box-shadow: -14px -2px 37px #9ecaed;
+}
+
+
+.score{
+  display: inline-block;
+  height: 23px;
+  padding-top: 7px;
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+  width: 50px;
+  /*background-color: grey;*/
+  position: absolute;
+  margin-top: 470px;
+  border-right: 10px groove white;
+  border-left: 10px groove white;
+  border-bottom:10px groove white;
+  /*box-shadow:0px 0px 20px white;*/
+}
+
+
+#score1{
+  float: left;
+  margin-left: -390px;
+  display: inline-block;
+}
+
+
+#score2{
+  float: right;
+  margin-left: 320px;
+  display: inline-block;
+}
+
+/*//////DIALOG BOX MODAL/////////////////*/
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.5;
+    /*filter: alpha(opacity=50);*/
+}
+
+#modal {
+    position:absolute;
+    /*background:url(tint20.png) 0 0 repeat;*/
+    background:rgba(0,0,0,0.2);
+    border-radius:14px;
+    padding:8px;
+}
+
+#content {
+    border-radius:8px;
+    background:#fff;
+    padding:20px;
+}
+
+#close {
+    /*This is the close button - might be able to change this*/
+    position:absolute;
+    /*background:url(close.png) 0 0 no-repeat;*/
+    width:24px;
+    height:27px;
+    /*a element is default inline*/
+    display:block;
+    /*moves close button text off of the overlay*/
+    text-indent:-9999px;
+    top:-7px;
+    right:-7px;
+}
