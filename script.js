@@ -103,12 +103,12 @@ var player1Turns = [];
 var player2Turns = [];
 var player1Wins = 0;
 var player2Wins = 0;
-var roundsRequired = 5;
+var roundsRequired = 3;
 
 var questionAnswered = false;
 var pointsAddForCorrect=10;
 var pointsMinusForWrong= 3;
-var pointsToWin = 50;
+var pointsToWin = 20;
 var scoreMeterHeight = 300;
 
 var $lightning = $('.lightning');
@@ -174,6 +174,13 @@ function setAndShowActiveCategory(){
   //Select active Category
   activeCategory = categoryArray[Math.floor(Math.random()*categoryArray.length)];
 
+  //Set active player on game load
+  if(playerCounter%2===0){
+      $('#player1').addClass('activePlayer')
+    } else{
+      $('#player2').addClass('activePlayer')
+    }
+  
   //set Active Category with Category Name
   var spinCategory = activeCategory.catName;
 
@@ -184,8 +191,8 @@ function setAndShowActiveCategory(){
   activeQuestion = activeCategory.Questions[Math.floor(Math.random()*8)]
 
   //Display active question in question box
-  $questionBoxHtml.hide().html(activeQuestion.question).delay(3000).slideDown(1000);
-  $answerBox.hide().delay(5000).fadeIn(1000);
+  $questionBoxHtml.hide().html(activeQuestion.question).delay(5000).fadeIn(3000);
+  $answerBox.hide().delay(8500).fadeIn(2000);
 
   //Animate answer options in answer box
   answersIntervalID = window.setInterval(animateAnswers,3000);
@@ -196,12 +203,14 @@ function setAndShowActiveCategory(){
   activeFalseAnswers = activeQuestion.falseAnswers;
 
   //Display correct answer in answer options
-  $rightAnswer.hide().html(activeAnswer).delay(6000).fadeIn(1000);
+  $rightAnswer.hide().html(activeAnswer)
 
   //Display incorrect answers in answer options
   $wrongAnswers.each(function(index){
     $(this).hide().html(activeFalseAnswers[index])
-  }).delay(6000).fadeIn(1000);
+  });
+
+  $allAnswers.delay(9500).fadeIn(2000);
 }
 
 function activateSpinCategory(){
@@ -214,21 +223,24 @@ function activateSpinCategory(){
     $lightning.addClass('lightningOpacity');
 
     $rightAnswer.removeClass('blueGlow');
+
     unhideDivsWithFade();
+
     setTimeout(setAndShowActiveCategory(),5000);
+
     clickOnAnswers();
     //Display countdown in alert box
     $alertBox.hide().html('Get Ready!').delay(3000).fadeIn(1000)
 
     //Display timer in alert box and begin countdown
-    setTimeout(countdownTimer,7000);
+    setTimeout(countdownTimer,12000);
   })
 }
 
 function animateAnswers(){
   $allAnswers.each(function(){
     $(this).animate({
-      marginTop:(Math.random()*140),
+      marginTop:(Math.random()*130),
       // marginBottom:(Math.random()*100),
       marginLeft:(Math.random()*320),
       // marginRight:(Math.random()*100)
@@ -322,6 +334,7 @@ function resetForNewQuestion(){
 
   $wrongAnswers.hide().fadeOut(2000);
   $rightAnswer.delay(5000).fadeOut(2000);
+  $categorySelected.delay(5000).slideUp(2000);
 
 
   $questionBoxHtml.html('');
@@ -395,8 +408,8 @@ function checkWinner(){
 
       console.log('check winner is working')
       player1Wins++;
-      animateLightningLeft(5000);
-      setTimeout(clearGame(),7000);
+      animateLightningLeft(7000);
+      setTimeout(clearGame(),9000);
 
     }
       else if (player1Score>=pointsToWin && player1Turns.length>player2Turns.length && player2Score<pointsToWin){
@@ -407,8 +420,8 @@ function checkWinner(){
           if(player2Score>player1Score){
             $alertBox.hide().html('Player 2 wins - High Score!').delay(1000).fadeIn(1000);
             player2Wins++;
-            animateLightningRight(5000);
-            setTimeout(clearGame(),7000)
+            animateLightningRight(7000);
+            setTimeout(clearGame(),9000)
 
           }
         else if(player2Score===player1Score){
@@ -418,8 +431,8 @@ function checkWinner(){
         else if(player2Score<player1Score && player1Turns.length===player2Turns.length ){
           $alertBox.hide().html('Player 1 wins - High Score!').delay(1000).fadeIn(1000);
           player1Wins++;
-          animateLightningLeft(5000);
-          setTimeout(clearGame(),7000)
+          animateLightningLeft(7000);
+          setTimeout(clearGame(),9000)
         }
         else {
           $alertBox.hide().html('Keep qracking, the game is still up for grabs!').delay(1000).fadeIn(1000);
@@ -429,8 +442,8 @@ function checkWinner(){
       else if(player1Score>=pointsToWin && player1Turns.length===player2Turns.length){
         $alertBox.hide().html('Player 1 wins! - High Score!').delay(1000).fadeIn(1000);
         player1Wins++;
-        animateLightningLeft(5000);
-        setTimeout(clearGame(),7000);
+        animateLightningLeft(7000);
+        setTimeout(clearGame(),9000);
 
       }
       else if(counterTime>0){
@@ -496,9 +509,9 @@ function hideDivsWithFade(){
 }
 
 function unhideDivsWithFade(){
-  $('.questionsSection').delay(2000).fadeIn(2000);
-  $('.answersSection').delay(2000).fadeIn(2000);
-  $('.alertSection').delay(2000).slideDown(2000);
+  $('.questionsSection').delay(4000).fadeIn(4000);
+  $('.answersSection').delay(4000).fadeIn(4000);
+  $('.alertSection').delay(4000).slideDown(2000);
 }
 
 
@@ -534,7 +547,7 @@ function spinBox(secondsToSpin){
   },25);
 
   setTimeout(function(){
-    $myModal.fadeOut(2000);
+    $myModal.fadeOut(1000);
     clearInterval(spinInterval);
   },secondsToSpin);
 }

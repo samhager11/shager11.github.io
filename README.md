@@ -20,6 +20,8 @@ To Play:
 
 Visit: http://shager11.github.io/ 
 
+
+
 Development process:
 
 Technologies used: HTML / CSS / Javascript + JQuery
@@ -31,6 +33,7 @@ The jQuery and CSS transitions and animations implemented provide an element of 
 Not-Yet-Implemented:
 
 - Bonus rounds that award increased points along with additional categories and questions
+- Win categories and visually display category wins (with avatars for each category).
 - Scoring that dynamically adjusts based on the timer with decreasing points awarded as time ticks away
 - Player name and image/avatar able to be input upon game start
 - Sound effects and music to add to the game experience
