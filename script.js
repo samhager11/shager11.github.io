@@ -103,12 +103,12 @@ var player1Turns = [];
 var player2Turns = [];
 var player1Wins = 0;
 var player2Wins = 0;
-var roundsRequired = 2;
+var roundsRequired = 5;
 
 var questionAnswered = false;
 var pointsAddForCorrect=10;
 var pointsMinusForWrong= 3;
-var pointsToWin = 10;
+var pointsToWin = 50;
 var scoreMeterHeight = 300;
 
 var $lightning = $('.lightning');
@@ -116,8 +116,8 @@ var $lightningLeft = $('#picForLeft');
 var $lightningRight = $('#picForRight');
 
 
-var counterTime = 5;
-var counterResetTime = 5;
+var counterTime = 20;
+var counterResetTime = 20;
 
 
 
@@ -181,7 +181,7 @@ function setAndShowActiveCategory(){
   $categorySelected.hide().html(spinCategory).delay(1000).slideDown(1000);
 
   //Select active question from the category
-  activeQuestion = activeCategory.Questions[Math.floor(Math.random()*categoryArray.length)]
+  activeQuestion = activeCategory.Questions[Math.floor(Math.random()*8)]
 
   //Display active question in question box
   $questionBoxHtml.hide().html(activeQuestion.question).delay(3000).slideDown(1000);

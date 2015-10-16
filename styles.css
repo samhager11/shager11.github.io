@@ -13,7 +13,7 @@
   position: fixed;
   height: 500px;
   width: 500px;
-  left: 20.5%;
+  left: 29%;
   top: 12%;
   border: 20px groove;
   border-radius: 20px;
@@ -36,7 +36,7 @@
   color: white;
   border-radius: 15px;
   position: fixed;
-  margin-top: -25px;
+  margin-top: -15px;
   margin-left: 229px;
   /*font-family: 'Cabin Sketch', cursive;*/
 }
@@ -48,14 +48,14 @@
   font-family: 'Cabin Sketch', cursive;
   font-weight: 700;
   margin-left: 107px;
-  margin-top: 20px;
+  margin-top: 12px;
   position: relative;
 }
 
 #my-modal > p{
   font-size: 18px;
-  margin: 35px;
-  margin-top: 10px;
+  margin: 30px;
+  margin-top: 12px;
   text-align: center;
 }
 
